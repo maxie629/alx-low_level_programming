@@ -6,7 +6,6 @@
 
  * @void: no arguments
 
-
  * Description: the program starts and ends here.
 
  * Return: value 0 to exit
