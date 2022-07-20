@@ -1,21 +1,18 @@
 #include "main.h"
 
 /**
- * _puts_recursion -  function that prints a string
- *
- * @s: string to receive
- *
- * Return: nothing
+ * _pow_recursion - function that returns the value of x
+ * raised to the power of y
+ * @x: base number
+ * @y: pow number
+ * Return: int
  */
 
-void _puts_recursion(char *s)
+int _pow_recursion(int x, int y)
 {
-	if (*s == '\0')
-	{
-		_putchar('\n');
-		return;
-	}
-	_putchar(*s);
-	s++;
-	_puts_recursion(s);
+	if (y < 0)
+		return (-1);
+	if (y == 0)
+		return (1);
+	return (x * _pow_recursion(x, y - 1));
 }
